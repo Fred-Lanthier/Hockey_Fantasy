@@ -1,0 +1,315 @@
+ID,Player,Team,Position,RkOv,Status,Roster Status,Age,Opponent,FPts,FP/G,Ros,+/-,Cap Hit (M$)
+*049k7*,Martin Necas,COL,F,3,DaddyX23,Active,26,,16.5,16.5,100%,0%,6.5
+*01zs1*,Scott Wedgewood,COL,G,4,Pleka,Reserve,33,,12.8,12.8,48%,0%,1.5
+*02ybk*,Artturi Lehkonen,COL,F,5,DaddyX23,Reserve,30,,12.0,12.0,72%,0%,4.5
+*05m17*,Frank Nazar,CHI,F,6,Bigdawn,Minors,21,,10.5,10.5,69%,0%,0.95
+*03ece*,Igor Shesterkin,NYR,G,8,DaddyX23,Active,29,,10.15,10.15,95%,0%,11.5
+*04alw*,Cale Makar,COL,D,9,DJCarrot,Active,26,,10.0,10.0,100%,0%,9.0
+*05r50*,Mackie Samoskevich,FLA,F,10,Boeuf_,Minors,22,,10.0,10.0,44%,0%,0.925
+*02f9l*,Nathan MacKinnon,COL,F,12,Mando18,Active,30,,9.5,9.5,100%,0%,12.6
+*04bii*,Spencer Knight,CHI,G,13,DaddyX23,Reserve,24,,9.3,9.3,71%,0%,4.5
+*03e1n*,Adrian Kempe,LAK,F,17,Fred_Lan,Active,29,@VGK Wed 10:00PM,8.5,8.5,100%,0%,5.5
+*03dms*,Kevin Fiala,LAK,F,19,SamBleau,Reserve,29,@VGK Wed 10:00PM,8.0,8.0,96%,0%,7.875
+*031p3*,Carter Verhaeghe,FLA,F,22,DaddyX23,Reserve,30,,8.0,8.0,93%,0%,7.0
+*03ecl*,Gustav Forsling,FLA,D,20,Boeuf_,Active,29,,8.0,8.0,68%,0%,5.75
+*01ud1*,Sergei Bobrovsky,FLA,G,23,MagicFac,Active,37,,7.65,7.65,94%,0%,10.0
+*01zql*,Brock Nelson,COL,F,27,Mando18,Active,33,,7.0,7.0,68%,0%,7.5
+*02g00*,Aaron Ekblad,FLA,D,31,Fred_Lan,Active,29,,5.5,5.5,94%,0%,6.1
+*05kbn*,Will Cuylle,NYR,F,32,Olilapat,Active,23,,5.0,5.0,74%,0%,0.828333
+*027i6*,Mika Zibanejad,NYR,F,49,Fred_Lan,Active,32,,3.0,3.0,94%,0%,8.5
+*02b3o*,Rickard Rakell,PIT,F,47,SamBleau,Active,32,,3.0,3.0,90%,0%,5.0
+*016g3*,Erik Karlsson,PIT,D,44,SamBleau,Active,35,,3.0,3.0,88%,0%,11.5
+*05yms*,Sam Rinzel,CHI,D,48,Pouding_,Reserve,21,,3.0,3.0,79%,0%,0.941667
+*06axy*,Artyom Levshunov,CHI,D,45,Mando18,Active,19,,3.0,3.0,56%,0%,0.975
+*02ybl*,Valeri Nichushkin,COL,F,55,MagicFac,Reserve,30,,2.5,2.5,97%,0%,6.125
+*03ec6*,Devon Toews,COL,D,57,Pouding_,Active,31,,2.5,2.5,90%,0%,7.25
+*02un5*,Sam Reinhart,FLA,F,62,Pleka,Active,29,,2.0,2.0,100%,0%,8.625
+*00454*,Sidney Crosby,PIT,F,68,Pleka,Active,38,,1.5,1.5,100%,0%,8.7
+*04lo0*,Quinton Byfield,LAK,F,65,MagicFac,Active,23,@VGK Wed 10:00PM,1.5,1.5,91%,0%,6.25
+*039cg*,Sam Bennett,FLA,F,63,Bigdawn,Active,29,,1.5,1.5,89%,0%,8.0
+*04znw*,Brandt Clarke,LAK,D,66,MagicFac,Minors,22,@VGK Wed 10:00PM,1.5,1.5,77%,0%,0.863334
+*04amg*,Alexis Lafreniere,NYR,F,70,Olilapat,Active,23,,1.5,1.5,73%,0%,7.45
+*042xa*,Ross Colton,COL,F,67,DaddyX23,Inj Res,29,,1.5,1.5,26%,0%,4.0
+*04y4m*,Connor Bedard,CHI,F,76,Olilapat,Active,20,,1.0,1.0,100%,0%,0.95
+*0243e*,Gabriel Landeskog,COL,F,81,Bigdawn,Active,32,,1.0,1.0,87%,0%,7.0
+*06snb*,Benjamin Kindel,PIT,F,79,DJCarrot,Minors,18,,1.0,1.0,25%,0%,0.975
+*0222k*,Darcy Kuemper,LAK,G,88,SamBleau,Active,35,@VGK Wed 10:00PM,0.55,0.55,97%,0%,5.25
+*0243f*,Seth Jones,FLA,D,97,Mando18,Active,31,,0.5,0.5,92%,0%,9.5
+*00qnu*,Drew Doughty,LAK,D,94,MagicFac,Active,35,@VGK Wed 10:00PM,0.5,0.5,83%,0%,11.0
+*05tpa*,Ville Koivunen,PIT,F,98,Fred_Lan,Minors,22,,0.5,0.5,46%,0%,0.805833
+*03ebb*,Warren Foegele,LAK,F,96,SamBleau,Reserve,29,@VGK Wed 10:00PM,0.5,0.5,29%,0%,3.5
+*04lbz*,Quinn Hughes,VAN,D,3251,Doumi,Active,25,,0.0,0.0,100%,0%,7.85
+*04bdb*,Jack Hughes,NJD,F,3247,Mando18,Active,24,,0.0,0.0,100%,0%,8.0
+*03rh3*,Kirill Kaprizov,MIN,F,3601,Doumi,Active,28,,0.0,0.0,100%,0%,9.0
+*02b70*,Nikita Kucherov,TBL,F,4024,Pouding_,Active,32,,0.0,0.0,100%,0%,9.5
+*05wwg*,Lane Hutson,MTL,D,3286,Bigdawn,Active,21,@TOR Wed 7:00PM,0.0,0.0,100%,0%,0.95
+*02un4*,Connor McDavid,EDM,F,4905,Pleka,Active,28,CGY Wed 10:00PM,0.0,0.0,100%,0%,12.5
+*042t5*,Tage Thompson,BUF,F,7584,Doumi,Active,27,,0.0,0.0,100%,0%,7.142857
+*03kra*,Kyle Connor,WPG,F,1427,DaddyX23,Active,28,,0.0,0.0,100%,0%,7.142857
+*048xc*,Nick Suzuki,MTL,F,7433,Pouding_,Active,26,@TOR Wed 7:00PM,0.0,0.0,100%,0%,7.875
+*02yjl*,Leon Draisaitl,EDM,F,1843,Pleka,Active,29,CGY Wed 10:00PM,0.0,0.0,100%,0%,14.0
+*02ybn*,Josh Morrissey,WPG,D,5260,Pleka,Reserve,30,,0.0,0.0,100%,0%,6.25
+*03d12*,David Pastrnak,BOS,F,5796,SamBleau,Active,29,@WSH Wed 7:30PM,0.0,0.0,100%,0%,11.25
+*03924*,Jack Eichel,VGK,F,1965,Boeuf_,Active,28,LAK Wed 10:00PM,0.0,0.0,100%,0%,10.0
+*04xec*,Matt Boldy,MIN,F,780,Doumi,Active,24,,0.0,0.0,100%,0%,7.0
+*03mn8*,Clayton Keller,UTA,F,3687,Doumi,Active,27,,0.0,0.0,100%,0%,7.15
+*02o7s*,Connor Hellebuyck,WPG,G,3008,Fred_Lan,Active,32,,0.0,0.0,100%,0%,8.5
+*03ra7*,Zach Werenski,CBJ,D,8083,MagicFac,Active,28,,0.0,0.0,100%,0%,9.583333
+*05w9c*,Mack Celebrini,SJS,F,1225,Mando18,Minors,19,,0.0,0.0,100%,0%,
+*04dwj*,Jason Robertson,DAL,F,6440,Bigdawn,Active,26,,0.0,0.0,100%,0%,7.75
+*051z0*,Tim Stutzle,OTT,F,7379,Boeuf_,Active,23,,0.0,0.0,100%,0%,8.35
+*04lc0*,Evan Bouchard,EDM,D,812,Boeuf_,Active,25,CGY Wed 10:00PM,0.0,0.0,100%,0%,10.5
+*042ye*,Jesper Bratt,NJD,F,895,Pouding_,Active,27,,0.0,0.0,100%,0%,7.875
+*042w4*,Adam Fox,NYR,D,2319,DJCarrot,Active,27,,0.0,0.0,100%,0%,9.5
+*01c12*,John Tavares,TOR,F,7519,SamBleau,Active,35,MTL Wed 7:00PM,0.0,0.0,100%,0%,4.38928
+*04mv2*,Cole Caufield,MTL,F,1211,MagicFac,Active,24,@TOR Wed 7:00PM,0.0,0.0,100%,0%,7.85
+*03zul*,Filip Gustavsson,MIN,G,2789,Fred_Lan,Active,27,,0.0,0.0,100%,0%,3.75
+*03jxy*,Auston Matthews,TOR,F,4829,Bigdawn,Active,28,MTL Wed 7:00PM,0.0,0.0,100%,0%,13.25
+*03e1m*,Brayden Point,TBL,F,6072,MagicFac,Active,29,,0.0,0.0,99%,0%,9.5
+*059e0*,Jake Sanderson,OTT,D,6675,Mando18,Reserve,23,,0.0,0.0,99%,0%,8.05
+*042yb*,Brandon Hagel,TBL,F,2813,SamBleau,Active,27,,0.0,0.0,99%,0%,6.5
+*01c13*,Victor Hedman,TBL,D,2978,Pleka,Active,34,,0.0,0.0,99%,0%,8.0
+*0457k*,Jake Oettinger,DAL,G,5608,Pouding_,Active,26,,0.0,0.0,99%,0%,8.25
+*03mn9*,Mikko Rantanen,DAL,F,6280,MagicFac,Active,28,,0.0,0.0,99%,0%,12.0
+*031nx*,Shea Theodore,VGK,D,7558,Pleka,Active,30,LAK Wed 10:00PM,0.0,0.0,99%,0%,7.425
+*04yu5*,Thomas Harley,DAL,D,2904,Boeuf_,Minors,24,,0.0,0.0,99%,0%,4.0
+*04apb*,Robert Thomas,STL,F,7574,Mando18,Reserve,26,,0.0,0.0,99%,0%,8.125
+*05tqt*,Wyatt Johnston,DAL,F,3477,DJCarrot,Active,22,,0.0,0.0,99%,0%,8.4
+*02fzm*,Filip Forsberg,NSH,F,2283,Doumi,Active,31,,0.0,0.0,99%,0%,8.5
+*03jvu*,Mitch Marner,VGK,F,4758,MagicFac,Active,28,LAK Wed 10:00PM,0.0,0.0,99%,0%,10.903
+*05gvo*,Matvei Michkov,PHI,F,5090,Olilapat,Active,20,,0.0,0.0,99%,0%,0.95
+*02azb*,Mark Scheifele,WPG,F,6753,Fred_Lan,Reserve,32,,0.0,0.0,99%,0%,8.5
+*05gvq*,Seth Jarvis,CAR,F,3395,DaddyX23,Active,23,,0.0,0.0,99%,0%,7.420087
+*04kyh*,Brady Tkachuk,OTT,F,7621,DJCarrot,Active,26,,0.0,0.0,99%,0%,8.205714
+*031p0*,Jake Guentzel,TBL,F,2754,Mando18,Active,31,,0.0,0.0,99%,0%,9.0
+*04ad7*,Rasmus Dahlin,BUF,D,1590,Doumi,Active,25,,0.0,0.0,99%,0%,11.0
+*051wf*,Dustin Wolf,CGY,G,8214,Pouding_,Active,24,@EDM Wed 10:00PM,0.0,0.0,99%,0%,0.813333
+*04ymt*,Lucas Raymond,DET,F,6312,DJCarrot,Active,23,,0.0,0.0,99%,0%,8.075
+*02yjj*,William Nylander,TOR,F,5558,SamBleau,Active,29,MTL Wed 7:00PM,0.0,0.0,99%,0%,11.5
+*04o0h*,Dylan Guenther,UTA,F,2753,Olilapat,Reserve,22,,0.0,0.0,99%,0%,7.142875
+*0457f*,Nico Hischier,NJD,F,3096,Bigdawn,Active,26,,0.0,0.0,99%,0%,7.25
+*05tur*,Matthew Knies,TOR,F,3837,Bigdawn,Active,22,MTL Wed 7:00PM,0.0,0.0,99%,0%,7.75
+*03mbn*,Mackenzie Blackwood,COL,G,717,DaddyX23,Active,28,,0.0,0.0,99%,0%,5.25
+*04qy5*,Kirill Marchenko,CBJ,F,4734,DJCarrot,Active,25,,0.0,0.0,99%,0%,0.925
+*03mkm*,Adin Hill,VGK,G,3076,DJCarrot,Active,29,LAK Wed 10:00PM,0.0,0.0,99%,0%,4.9
+*03as9*,Dylan Strome,WSH,F,7363,MagicFac,Active,28,BOS Wed 7:30PM,0.0,0.0,99%,0%,5.0
+*031v6*,MacKenzie Weegar,CGY,D,8055,Doumi,Active,31,@EDM Wed 10:00PM,0.0,0.0,99%,0%,6.25
+*064r2*,Ivan Demidov,MTL,F,1703,DJCarrot,Reserve,19,@TOR Wed 7:00PM,0.0,0.0,99%,0%,0.940833
+*03rmx*,Sebastian Aho,CAR,F,145,Fred_Lan,Active,28,,0.0,0.0,99%,0%,9.75
+*04zb4*,Moritz Seider,DET,D,6852,Pouding_,Active,24,,0.0,0.0,98%,0%,8.55
+*03yg3*,Mikhail Sergachev,UTA,D,6875,DaddyX23,Active,27,,0.0,0.0,98%,0%,8.5
+*03duf*,Dylan Larkin,DET,F,4204,MagicFac,Reserve,29,,0.0,0.0,98%,0%,8.7
+*051m4*,Jackson LaCombe,ANA,D,4089,Pouding_,Active,24,,0.0,0.0,98%,0%,0.925
+*02nom*,Andrei Vasilevskiy,TBL,G,7831,Pleka,Active,31,,0.0,0.0,98%,0%,9.5
+*03d09*,Alex Tuch,BUF,F,7702,Fred_Lan,Reserve,29,,0.0,0.0,98%,0%,4.75
+*01fx3*,Roman Josi,NSH,D,3522,Doumi,Active,35,,0.0,0.0,98%,0%,9.059
+*05ui2*,Logan Cooley,UTA,F,1437,Pouding_,Minors,21,,0.0,0.0,98%,0%,0.95
+*04an5*,Miro Heiskanen,DAL,D,2996,DJCarrot,Active,26,,0.0,0.0,98%,0%,8.45
+*04ymn*,Luke Hughes,NJD,D,3250,Mando18,Active,22,,0.0,0.0,98%,0%,0.925
+*04ld3*,Noah Dobson,MTL,D,1790,DaddyX23,Active,25,@TOR Wed 7:00PM,0.0,0.0,97%,0%,4.0
+*038vb*,Travis Konecny,PHI,F,3885,Boeuf_,Active,28,,0.0,0.0,97%,0%,8.75
+*03v70*,Alex DeBrincat,DET,F,1660,Boeuf_,Active,27,,0.0,0.0,97%,0%,7.875
+*0579x*,Adam Fantilli,CBJ,F,2111,Pouding_,Minors,20,,0.0,0.0,97%,0%,0.95
+*048x9*,Elias Pettersson,VAN,F,5948,Doumi,Reserve,26,,0.0,0.0,97%,0%,11.6
+*042vl*,Jordan Kyrou,STL,F,4083,MagicFac,Reserve,27,,0.0,0.0,97%,0%,8.125
+*02np7*,Anthony Stolarz,TOR,G,7334,Pouding_,Reserve,31,MTL Wed 7:00PM,0.0,0.0,96%,0%,2.5
+*03rfp*,Sam Montembeault,MTL,G,5205,Boeuf_,Active,28,@TOR Wed 7:00PM,0.0,0.0,96%,0%,3.15
+*004cq*,Alex Ovechkin,WSH,F,5702,SamBleau,Active,40,BOS Wed 7:30PM,0.0,0.0,96%,0%,9.5
+*051yz*,Dylan Holloway,STL,F,3147,Olilapat,Active,24,,0.0,0.0,96%,0%,2.290457
+*03as8*,Nikolaj Ehlers,CAR,F,1961,DJCarrot,Reserve,29,,0.0,0.0,96%,0%,8.5
+*03mqg*,Jakob Chychrun,WSH,D,1315,MagicFac,Active,27,BOS Wed 7:30PM,0.0,0.0,96%,0%,4.6
+*01d6c*,Jacob Markstrom,NJD,G,4755,DJCarrot,Reserve,35,,0.0,0.0,95%,0%,6.0
+*04f2d*,Drake Batherson,OTT,F,468,Pleka,Inj Res,27,,0.0,0.0,95%,0%,4.975
+*04mdc*,Logan Thompson,WSH,G,7580,Bigdawn,Active,28,BOS Wed 7:30PM,0.0,0.0,95%,0%,0.766667
+*03rf2*,Roope Hintz,DAL,F,3090,Pleka,Active,28,,0.0,0.0,94%,0%,8.45
+*03uzr*,Matthew Tkachuk,FLA,F,7622,DJCarrot,Inj Res,27,,0.0,0.0,94%,0%,9.5
+*0322w*,Ilya Sorokin,NYI,G,7173,Pleka,Active,30,,0.0,0.0,94%,0%,8.25
+*02azf*,Dougie Hamilton,NJD,D,2864,Fred_Lan,Active,32,,0.0,0.0,94%,0%,9.0
+*03wpm*,Charlie McAvoy,BOS,D,4867,Pleka,Active,27,@WSH Wed 7:30PM,0.0,0.0,93%,0%,9.5
+*015pv*,John Carlson,WSH,D,1159,SamBleau,Active,35,BOS Wed 7:30PM,0.0,0.0,93%,0%,8.0
+*03rf8*,Vince Dunn,SEA,D,1898,Pleka,Active,28,,0.0,0.0,93%,0%,7.35
+*01ztp*,Zach Hyman,EDM,F,3296,Pouding_,Reserve,33,CGY Wed 10:00PM,0.0,0.0,93%,0%,5.5
+*03de2*,Brandon Montour,SEA,D,5210,DaddyX23,Active,31,,0.0,0.0,93%,0%,7.142857
+*05lu8*,Alexander Nikishin,CAR,D,5479,Doumi,Minors,24,,0.0,0.0,93%,0%,0.925
+*048vf*,Andrei Svechnikov,CAR,F,7439,Boeuf_,Reserve,25,,0.0,0.0,93%,0%,7.75
+*02fda*,Jordan Binnington,STL,G,673,MagicFac,Active,32,,0.0,0.0,93%,0%,6.0
+*03as7*,Thatcher Demko,VAN,G,1706,Bigdawn,Reserve,29,,0.0,0.0,92%,0%,5.0
+*02oar*,Linus Ullmark,OTT,G,7753,Doumi,Reserve,32,,0.0,0.0,92%,0%,8.25
+*02nq3*,Shayne Gostisbehere,CAR,D,2635,DJCarrot,Active,32,,0.0,0.0,92%,0%,3.2
+*05r1c*,Juraj Slafkovsky,MTL,F,7066,Olilapat,Active,21,@TOR Wed 7:00PM,0.0,0.0,92%,0%,7.6
+*04zj5*,JJ Peterka,UTA,F,5914,Bigdawn,Minors,23,,0.0,0.0,91%,0%,0.855833
+*01ex7*,Matt Duchene,DAL,F,1873,Fred_Lan,Reserve,34,,0.0,0.0,90%,0%,4.5
+*03ra8*,Timo Meier,NJD,F,5023,SamBleau,Reserve,28,,0.0,0.0,90%,0%,8.8
+*03w5m*,Gabriel Vilardi,WPG,F,7892,Doumi,Reserve,26,,0.0,0.0,90%,0%,3.4375
+*06hco*,Zayne Parekh,CGY,D,5763,DJCarrot,Minors,19,@EDM Wed 10:00PM,0.0,0.0,90%,0%,0.9425
+*031pl*,Juuse Saros,NSH,G,6699,Doumi,Active,30,,0.0,0.0,90%,0%,7.74
+*06bmb*,Zeev Buium,MIN,D,1010,Mando18,Minors,19,,0.0,0.0,89%,0%,0.966667
+*03yxp*,Stuart Skinner,EDM,G,7057,SamBleau,Reserve,26,CGY Wed 10:00PM,0.0,0.0,89%,0%,2.6
+*03rae*,Joel Eriksson Ek,MIN,F,2055,Pouding_,Active,28,,0.0,0.0,89%,0%,5.25
+*02uws*,Mathew Barzal,NYI,F,455,Pouding_,Active,28,,0.0,0.0,88%,0%,9.15
+*02422*,Ryan Nugent-Hopkins,EDM,F,5541,Boeuf_,Reserve,32,CGY Wed 10:00PM,0.0,0.0,88%,0%,5.125
+*03j8l*,Noah Hanifin,VGK,D,2881,Boeuf_,Active,28,LAK Wed 10:00PM,0.0,0.0,88%,0%,7.35
+*02noj*,Tom Wilson,WSH,F,8186,Boeuf_,Active,31,BOS Wed 7:30PM,0.0,0.0,88%,0%,6.5
+*06gk0*,Matthew Schaefer,NYI,D,6745,SamBleau,Minors,18,,0.0,0.0,87%,0%,
+*03dde*,Jake Walman,EDM,D,7992,Fred_Lan,Inj Res,29,CGY Wed 10:00PM,0.0,0.0,87%,0%,3.4
+*03rad*,Thomas Chabot,OTT,D,1235,Bigdawn,Active,28,,0.0,0.0,87%,0%,8.0
+*01zvf*,Mark Stone,VGK,F,7336,Fred_Lan,Active,33,LAK Wed 10:00PM,0.0,0.0,86%,0%,9.5
+*05r1l*,William Eklund,SJS,F,1976,Doumi,Minors,22,,0.0,0.0,86%,0%,0.863333
+*04zo0*,Pavel Dorofeyev,VGK,F,1815,Boeuf_,Reserve,24,LAK Wed 10:00PM,0.0,0.0,86%,0%,1.835
+*04f24*,Jeremy Swayman,BOS,G,7459,Mando18,Active,26,@WSH Wed 7:30PM,0.0,0.0,85%,0%,8.25
+*02un6*,Sean Monahan,CBJ,F,5200,DJCarrot,Active,30,,0.0,0.0,84%,0%,5.5
+*051tx*,Aliaksei Protas,WSH,F,6181,Doumi,Reserve,24,BOS Wed 7:30PM,0.0,0.0,84%,0%,3.375
+*01zvp*,Bryan Rust,PIT,F,6576,DaddyX23,Reserve,33,,0.0,0.0,83%,0%,5.125
+*04qyv*,Lukas Dostal,ANA,G,1819,DJCarrot,Active,25,,0.0,0.0,83%,0%,6.5
+*04mtp*,Dylan Cozens,OTT,F,1504,Bigdawn,Reserve,24,,0.0,0.0,83%,0%,7.1
+*049ph*,Neal Pionk,WPG,D,6020,Fred_Lan,Active,30,,0.0,0.0,82%,0%,5.875
+*02nqb*,Colton Parayko,STL,D,5758,SamBleau,Active,32,,0.0,0.0,82%,0%,6.5
+*05ltj*,Brock Faber,MIN,D,2092,Pouding_,Minors,23,,0.0,0.0,82%,0%,8.5
+*05gda*,Kent Johnson,CBJ,F,3462,Pleka,Minors,22,,0.0,0.0,82%,0%,0.925
+*03167*,Bo Horvat,NYI,F,3190,SamBleau,Reserve,30,,0.0,0.0,81%,0%,8.5
+*05gd8*,Mason McTavish,ANA,F,5008,Mando18,Minors,22,,0.0,0.0,81%,0%,7.0
+*0644b*,Will Smith,SJS,F,7125,DJCarrot,Minors,20,,0.0,0.0,80%,0%,0.95
+*03rih*,Karel Vejmelka,UTA,G,7855,Pleka,Reserve,29,,0.0,0.0,80%,0%,4.75
+*03jw0*,Joey Daccord,SEA,G,1581,MagicFac,Reserve,29,,0.0,0.0,80%,0%,1.2
+*03raf*,Brock Boeser,VAN,F,762,Pleka,Reserve,28,,0.0,0.0,79%,0%,7.25
+*01skq*,Cam Fowler,STL,D,2316,Bigdawn,Active,33,,0.0,0.0,78%,0%,6.5
+*03as6*,Jared McCann,SEA,F,4875,Fred_Lan,Inj Res,29,,0.0,0.0,78%,0%,5.0
+*03161*,Darnell Nurse,EDM,D,5545,MagicFac,Active,30,CGY Wed 10:00PM,0.0,0.0,77%,0%,9.25
+*05rjd*,Cutter Gauthier,ANA,F,2473,DJCarrot,Minors,21,,0.0,0.0,77%,0%,0.95
+*05y3a*,Leo Carlsson,ANA,F,1163,Mando18,Minors,20,,0.0,0.0,76%,0%,0.95
+*04o0g*,Marco Rossi,MIN,F,6523,Boeuf_,Minors,24,,0.0,0.0,75%,0%,5.0
+*003kg*,Patrick Kane,DET,F,3583,SamBleau,Reserve,36,,0.0,0.0,75%,0%,3.0
+*03wpi*,Pierre-Luc Dubois,WSH,F,1870,Mando18,Active,27,BOS Wed 7:30PM,0.0,0.0,73%,0%,8.5
+*04uql*,Cole Perfetti,WPG,F,5879,DJCarrot,Minors,23,,0.0,0.0,72%,0%,0.894167
+*04y8g*,Trevor Zegras,PHI,F,8344,Olilapat,Reserve,24,,0.0,0.0,71%,0%,5.75
+*02wy7*,Pavel Buchnevich,STL,F,999,Mando18,Active,30,,0.0,0.0,71%,0%,8.0
+*0529k*,Yaroslav Askarov,SJS,G,313,Mando18,Minors,23,,0.0,0.0,71%,0%,0.925
+*02noq*,Mike Matheson,MTL,D,4818,Mando18,Active,31,@TOR Wed 7:00PM,0.0,0.0,70%,0%,4.875
+*0457i*,Ukko-Pekka Luukkonen,BUF,G,4557,Doumi,Active,26,,0.0,0.0,70%,0%,4.75
+*05rf2*,Logan Stankoven,CAR,F,7248,Bigdawn,Minors,22,,0.0,0.0,70%,0%,0.814167
+*05ymj*,Jimmy Snuggerud,STL,F,7133,Fred_Lan,Active,21,,0.0,0.0,70%,0%,0.95
+*05xrx*,Marco Kasper,DET,F,3652,Pouding_,Minors,21,,0.0,0.0,69%,0%,0.886666
+*04xjf*,Owen Power,BUF,D,6143,DJCarrot,Inj Res,22,,0.0,0.0,68%,0%,8.35
+*04yn0*,Connor McMichael,WSH,F,4977,DaddyX23,Active,24,BOS Wed 7:30PM,0.0,0.0,67%,0%,2.1
+*026p4*,Jonathan Huberdeau,CGY,F,3230,SamBleau,Reserve,32,@EDM Wed 10:00PM,0.0,0.0,66%,0%,10.5
+*024lv*,Mattias Ekholm,EDM,D,1973,Pouding_,Active,35,CGY Wed 10:00PM,0.0,0.0,65%,0%,6.25
+*04dwk*,Josh Norris,BUF,F,5529,DJCarrot,Reserve,26,,0.0,0.0,65%,0%,7.95
+*061im*,Michael Misa,SJS,F,5153,Fred_Lan,Minors,18,,0.0,0.0,65%,0%,
+*02un7*,Aleksander Barkov,FLA,F,431,Pouding_,Inj Res,30,,0.0,0.0,65%,0%,10.0
+*04yu6*,Jamie Drysdale,PHI,D,1860,MagicFac,Minors,23,,0.0,0.0,63%,0%,2.3
+*03yh8*,Owen Tippett,PHI,F,7614,DaddyX23,Reserve,26,,0.0,0.0,63%,0%,6.2
+*042w1*,Joseph Woll,TOR,G,8217,Olilapat,Inj Res,27,MTL Wed 7:00PM,0.0,0.0,61%,0%,3.666667
+*02unz*,Nick Schmaltz,UTA,F,6775,SamBleau,Reserve,29,,0.0,0.0,60%,0%,5.85
+*04yqp*,Anton Lundell,FLA,F,4539,Boeuf_,Minors,24,,0.0,0.0,60%,0%,5.0
+*05nzz*,Simon Edvinsson,DET,D,1950,Olilapat,Active,22,,0.0,0.0,60%,0%,0.894167
+*0644f*,Ryan Leonard,WSH,F,4341,DaddyX23,Minors,20,BOS Wed 7:30PM,0.0,0.0,59%,0%,
+*04ldb*,Bowen Byram,BUF,D,1073,Olilapat,Active,24,,0.0,0.0,59%,0%,6.25
+*01skr*,Mikael Granlund,ANA,F,2669,SamBleau,Reserve,33,,0.0,0.0,59%,0%,7.0
+*02yjp*,Ivan Barbashev,VGK,F,418,Boeuf_,Reserve,29,LAK Wed 10:00PM,0.0,0.0,58%,0%,5.0
+*04xef*,Philip Broberg,STL,D,926,Doumi,Minors,24,,0.0,0.0,57%,0%,4.580917
+*05ran*,Matt Coronato,CGY,F,1461,Boeuf_,Minors,22,@EDM Wed 10:00PM,0.0,0.0,57%,0%,0.925
+*059e5*,Jake Neighbours,STL,F,5412,Fred_Lan,Minors,23,,0.0,0.0,57%,0%,3.75
+*04y80*,Shane Wright,SEA,F,8242,Mando18,Minors,21,,0.0,0.0,56%,0%,0.886666
+*05r1i*,Matty Beniers,SEA,F,558,Pleka,Minors,22,,0.0,0.0,56%,0%,7.142857
+*05tas*,Olen Zellweger,ANA,D,8349,Olilapat,Active,22,,0.0,0.0,55%,0%,0.844167
+*050rc*,Dmitry Voronkov,CBJ,F,7938,Olilapat,Reserve,25,,0.0,0.0,54%,0%,
+*03wor*,Mason Marchment,SEA,F,4737,DJCarrot,Active,30,,0.0,0.0,52%,0%,4.5
+*03rfl*,Anthony Cirelli,TBL,F,1328,Pouding_,Active,28,,0.0,0.0,52%,0%,6.25
+*05gd9*,Zack Bolduc,MTL,F,779,SamBleau,Minors,22,@TOR Wed 7:00PM,0.0,0.0,51%,0%,0.863333
+*060hp*,Lian Bichsel,DAL,D,657,MagicFac,Minors,21,,0.0,0.0,49%,0%,0.918333
+*05rjg*,Danila Yurov,MIN,F,8305,Fred_Lan,Minors,21,,0.0,0.0,49%,0%,0.95
+*05tqu*,Logan Mailloux,STL,D,4666,Pleka,Minors,22,,0.0,0.0,48%,0%,0.875
+*06amv*,Sam Dickinson,SJS,D,1766,Bigdawn,Minors,19,,0.0,0.0,46%,0%,
+*05y7m*,Denton Mateychuk,CBJ,D,4815,Olilapat,Minors,21,,0.0,0.0,45%,0%,0.886667
+*05ylt*,Zach Benson,BUF,F,577,Doumi,Minors,20,,0.0,0.0,45%,0%,0.95
+*04r06*,Samuel Ersson,PHI,G,2071,Olilapat,Active,25,,0.0,0.0,44%,0%,1.45
+*04qxy*,Alexander Romanov,NYI,D,6493,Mando18,Reserve,25,,0.0,0.0,44%,0%,6.25
+*04mx6*,Kaiden Guhle,MTL,D,2757,DaddyX23,Active,23,@TOR Wed 7:00PM,0.0,0.0,43%,0%,0.863333
+*04osu*,Barrett Hayton,UTA,F,2963,Bigdawn,Reserve,25,,0.0,0.0,43%,0%,2.65
+*04mq0*,Matthew Savoie,EDM,F,6723,Fred_Lan,Active,21,CGY Wed 10:00PM,0.0,0.0,43%,0%,0.886666
+*067xz*,Axel Sandin Pellikka,DET,D,6676,Doumi,Minors,20,,0.0,0.0,43%,0%,0.918333
+*01c32*,Brayden Schenn,STL,F,6759,SamBleau,Reserve,34,,0.0,0.0,42%,0%,6.5
+*04yg5*,Jesper Wallstedt,MIN,G,7990,DJCarrot,Minors,22,,0.0,0.0,41%,0%,2.2
+*06axe*,Gabe Perreault,NYR,F,5887,Bigdawn,Minors,20,,0.0,0.0,41%,0%,
+*05yli*,Pavel Mintyukov,ANA,D,5142,Bigdawn,Minors,21,,0.0,0.0,40%,0%,0.918333
+*06ag2*,James Hagens,BOS,F,2817,Boeuf_,Minors,18,@WSH Wed 7:30PM,0.0,0.0,39%,0%,
+*06hcw*,Beckett Sennecke,ANA,F,6868,Fred_Lan,Minors,19,,0.0,0.0,39%,0%,0.9425
+*065nx*,Berkly Catton,SEA,F,1209,Olilapat,Minors,19,,0.0,0.0,39%,0%,0.9425
+*06jhd*,Anton Frondell,CHI,F,2371,DJCarrot,Minors,18,,0.0,0.0,39%,0%,0.975
+*068yz*,Jacob Fowler,MTL,G,2318,Olilapat,Minors,20,@TOR Wed 7:00PM,0.0,0.0,39%,0%,
+*03ebi*,Elvis Merzlikins,CBJ,G,5059,Mando18,Active,31,,0.0,0.0,38%,0%,5.4
+*06hcq*,Carter Yakemchuk,OTT,D,8255,Fred_Lan,Active,20,,0.0,0.0,38%,0%,0.9425
+*06jhc*,Tij Iginla,UTA,F,3307,DaddyX23,Minors,19,,0.0,0.0,38%,0%,0.9425
+*06fzv*,Cole Hutson,WSH,D,3285,Olilapat,Minors,19,BOS Wed 7:30PM,0.0,0.0,38%,0%,
+*06hj9*,Porter Martone,PHI,F,4790,DJCarrot,Minors,18,,0.0,0.0,38%,0%,
+*060jl*,Jiri Kulich,BUF,F,4047,Olilapat,Minors,21,,0.0,0.0,38%,0%,0.886666
+*04zp9*,Mavrik Bourque,DAL,F,835,DaddyX23,Active,23,,0.0,0.0,37%,0%,0.95
+*05k8c*,Tyson Foerster,PHI,F,2251,MagicFac,Minors,23,,0.0,0.0,36%,0%,3.75
+*06loq*,Caleb Desnoyers,UTA,F,1734,DaddyX23,Minors,18,,0.0,0.0,36%,0%,
+*04ai3*,Kevin Lankinen,VAN,G,4191,Boeuf_,Active,30,,0.0,0.0,36%,0%,4.5
+*06rus*,Brady Martin,NSH,F,4772,Bigdawn,Minors,18,,0.0,0.0,35%,0%,0.975
+*06ig3*,Cayden Lindstrom,CBJ,F,4423,Fred_Lan,Minors,19,,0.0,0.0,35%,0%,
+*05oxl*,Leevi Merilainen,OTT,G,5049,Bigdawn,Active,23,,0.0,0.0,35%,0%,1.05
+*05ril*,Simon Nemec,NJD,D,5428,Olilapat,Active,21,,0.0,0.0,34%,0%,0.918333
+*059e4*,Connor Zary,CGY,F,8334,Doumi,Minors,24,@EDM Wed 10:00PM,0.0,0.0,34%,0%,0.863333
+*059e1*,Braden Schneider,NYR,D,6789,Boeuf_,Minors,24,,0.0,0.0,33%,0%,2.2
+*05w9b*,Calum Ritchie,NYI,F,6421,Doumi,Minors,20,,0.0,0.0,33%,0%,
+*06imm*,Roger McQueen,ANA,F,5004,DaddyX23,Minors,19,,0.0,0.0,32%,0%,
+*05gtp*,Dawson Mercer,NJD,F,5042,Pleka,Minors,23,,0.0,0.0,32%,0%,0.894167
+*05oxs*,Jakub Dobes,MTL,G,1789,DaddyX23,Reserve,24,@TOR Wed 7:00PM,0.0,0.0,31%,0%,0.925
+*05o01*,Sebastian Cossa,DET,G,1468,Mando18,Minors,22,,0.0,0.0,31%,0%,0.863334
+*05mwh*,Devon Levi,BUF,G,4372,Bigdawn,Minors,23,,0.0,0.0,31%,0%,0.8125
+*03m26*,Conor Garland,VAN,F,2450,DaddyX23,Active,29,,0.0,0.0,31%,0%,4.95
+*058t9*,Seamus Casey,NJD,D,1195,Doumi,Minors,21,,0.0,0.0,31%,0%,0.95
+*06nkc*,Jake OBrien,SEA,F,5568,DJCarrot,Minors,18,,0.0,0.0,30%,0%,0.975
+*06pyw*,Victor Eklund,NYI,F,1975,Mando18,Minors,19,,0.0,0.0,30%,0%,
+*067yd*,David Reinbacher,MTL,D,6357,SamBleau,Active,20,@TOR Wed 7:00PM,0.0,0.0,30%,0%,0.886666
+*02fzj*,Blake Coleman,CGY,F,1388,DaddyX23,Reserve,33,@EDM Wed 10:00PM,0.0,0.0,29%,0%,4.9
+*06pyp*,Radim Mrtka,BUF,D,5286,DaddyX23,Minors,18,,0.0,0.0,28%,0%,0.975
+*05kdw*,Ridly Greig,OTT,F,2708,Boeuf_,Minors,23,,0.0,0.0,28%,0%,3.25
+*060jj*,Jani Nyman,SEA,F,5560,Pouding_,Minors,21,,0.0,0.0,27%,0%,0.891666
+*064om*,Michael Hage,MTL,F,2812,DaddyX23,Minors,19,@TOR Wed 7:00PM,0.0,0.0,27%,0%,
+*068yu*,Trey Augustine,DET,G,341,Olilapat,Active,20,,0.0,0.0,26%,0%,
+*06sqf*,Braeden Cootes,VAN,F,1442,DaddyX23,Minors,18,,0.0,0.0,26%,0%,0.975
+*06rqm*,Carter Bear,DET,F,488,DaddyX23,Minors,18,,0.0,0.0,26%,0%,0.975
+*05aa0*,Brayden Yager,WPG,F,8254,Fred_Lan,Reserve,20,,0.0,0.0,26%,0%,
+*02o7l*,Jaccob Slavin,CAR,D,7072,Pouding_,Reserve,31,,0.0,0.0,26%,0%,6.396062
+*06pyk*,Justin Carbonneau,STL,F,1144,Pouding_,Minors,18,,0.0,0.0,26%,0%,0.975
+*05r2j*,Nikita Chibrikov,WPG,F,1279,Fred_Lan,Minors,22,,0.0,0.0,25%,0%,0.875833
+*06hcp*,Anton Silayev,NJD,D,6993,Fred_Lan,Minors,19,,0.0,0.0,25%,0%,
+*06h8h*,Trevor Connelly,VGK,F,1421,Pouding_,Minors,19,LAK Wed 10:00PM,0.0,0.0,24%,0%,
+*06nke*,Jackson Smith,CBJ,D,7112,Mando18,Minors,18,,0.0,0.0,24%,0%,
+*06sn9*,Kashawn Aitcheson,NYI,D,149,Bigdawn,Minors,19,,0.0,0.0,24%,0%,
+*06jhe*,Cole Reschny,CGY,F,6373,Fred_Lan,Minors,18,@EDM Wed 10:00PM,0.0,0.0,22%,0%,
+*01t68*,Cam Talbot,DET,G,7488,Mando18,Reserve,38,,0.0,0.0,21%,0%,2.5
+*06spu*,Alexander Zharovsky,MTL,F,8362,MagicFac,Minors,18,@TOR Wed 7:00PM,0.0,0.0,21%,0%,
+*04qy3*,Martin Fehervary,WSH,D,2142,Boeuf_,Active,26,BOS Wed 7:30PM,0.0,0.0,20%,0%,2.675
+*058vh*,Zachary LHeureux,NSH,F,4086,MagicFac,Minors,22,,0.0,0.0,20%,0%,0.863334
+*02npz*,Esa Lindell,DAL,D,4405,Bigdawn,Reserve,31,,0.0,0.0,20%,0%,5.25
+*05yn1*,Jagger Firkus,SEA,F,2206,MagicFac,Minors,21,,0.0,0.0,20%,0%,0.891666
+*06snc*,Jack Nesbitt,PHI,F,5431,Olilapat,Minors,18,,0.0,0.0,20%,0%,
+*04yeb*,Simon Holmstrom,NYI,F,3160,Olilapat,Reserve,24,,0.0,0.0,19%,0%,0.863333
+*06snd*,Lynden Lakovic,WSH,F,4148,Doumi,Minors,18,BOS Wed 7:30PM,0.0,0.0,19%,0%,
+*06rut*,Cameron Reid,NSH,D,6346,Fred_Lan,Minors,18,,0.0,0.0,18%,0%,
+*03wpo*,Dante Fabbro,CBJ,D,2091,Bigdawn,Active,27,,0.0,0.0,18%,0%,2.5
+*06pyr*,Cullen Potter,CGY,F,6128,Boeuf_,Minors,18,@EDM Wed 10:00PM,0.0,0.0,17%,0%,
+*06pyz*,Bill Zonnon,PIT,F,8385,SamBleau,Minors,19,,0.0,0.0,16%,0%,
+*064n0*,Malcolm Spence,NYR,F,7198,Boeuf_,Minors,19,,0.0,0.0,15%,0%,
+*06lop*,Ivan Ryabkin,CAR,F,6588,MagicFac,Minors,18,,0.0,0.0,15%,0%,0.918333
+*06loc*,Yegor Surin,NSH,F,7418,DJCarrot,Minors,19,,0.0,0.0,15%,0%,
+*06pyi*,Logan Hensler,OTT,D,3043,Doumi,Minors,18,,0.0,0.0,15%,0%,
+*06lor*,Sascha Boumedienne,WPG,D,826,Olilapat,Minors,18,,0.0,0.0,14%,0%,
+*06sqm*,Ryker Lee,NSH,F,4303,Mando18,Minors,18,,0.0,0.0,14%,0%,
+*06axx*,William Horcoff,PIT,F,3186,Bigdawn,Minors,18,,0.0,0.0,14%,0%,
+*05yfk*,Mikhail Gulyayev,COL,D,2763,SamBleau,Minors,20,,0.0,0.0,14%,0%,
+*06pys*,Cameron Schmidt,DAL,F,6779,Olilapat,Minors,18,,0.0,0.0,13%,0%,
+*05tcz*,Oliver Kapanen,MTL,F,3597,MagicFac,Minors,22,@TOR Wed 7:00PM,0.0,0.0,12%,0%,0.925
+*06hrl*,L.J. Mooney,MTL,F,5215,Olilapat,Minors,18,@TOR Wed 7:00PM,0.0,0.0,11%,0%,
+*06sqp*,Vaclav Nestrasil,CHI,F,5436,SamBleau,Minors,18,,0.0,0.0,11%,0%,
+*06sqq*,Henry Brzustewicz,LAK,D,991,MagicFac,Minors,18,@VGK Wed 10:00PM,0.0,0.0,10%,0%,
+*06cfs*,Florian Xhekaj,MTL,F,8252,DaddyX23,Minors,21,@TOR Wed 7:00PM,0.0,0.0,7%,0%,0.866667
+*06sq9*,Cooper Simpson,BOS,F,7017,Pouding_,Minors,18,@WSH Wed 7:30PM,0.0,0.0,5%,0%,
+*05ltt*,Alex Laferriere,LAK,F,8412,Olilapat,Minors,23,@VGK Wed 10:00PM,-0.5,-0.5,56%,0%,4.1
+*02aez*,J.T. Miller,NYR,F,8417,Doumi,Active,32,,-1.0,-1.0,100%,0%,
+*03bfj*,Artemi Panarin,NYR,F,8418,Pleka,Active,33,,-2.0,-2.0,98%,0%,11.642857
+*02b76*,Vincent Trocheck,NYR,F,8419,Boeuf_,Active,32,,-2.0,-2.0,96%,0%,5.625

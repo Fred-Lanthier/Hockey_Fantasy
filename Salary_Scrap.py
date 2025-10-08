@@ -43,136 +43,90 @@ def clean_player_name(name):
     name = name.replace("'", '')
     return name
 
-def get_salary_puckpedia_selenium(player_name, team_abbr, driver, season="2025-26"):
+def get_salary_puckpedia_selenium(player_name, team_abbr, driver):
     """
-    Récupère le salaire depuis PuckPedia en simulant un navigateur réel
-    Résout le problème des homonymes en vérifiant l'équipe
-    Cherche spécifiquement le cap hit de la saison voulue
+    VERSION ROBUSTE - Sans vérification d'équipe
+    Si homonymes: prend le salaire maximum
     """
     clean_name = clean_player_name(player_name)
     
-    # Essayer différentes variantes d'URL (pour gérer les homonymes)
     urls_to_try = [
         f"https://puckpedia.com/player/{clean_name}",
         f"https://puckpedia.com/player/{clean_name}-1",
         f"https://puckpedia.com/player/{clean_name}-2",
     ]
     
-    for url in urls_to_try:
-        try:
-            driver.get(url)
-            time.sleep(2)  # Attendre le chargement de la page
-            
-            # Récupérer le contenu HTML
-            page_source = driver.page_source
-            
-            # Vérifier l'équipe pour éviter les homonymes
-            if team_abbr and team_abbr.upper() not in page_source.upper():
-                continue  # Mauvais joueur, essayer l'URL suivante
-            
-            # MÉTHODE 1: Chercher le cap hit général (souvent le plus fiable)
-            # Format: "cap hit of $X,XXX,XXX per season"
-            match = re.search(r'cap hit of \$([0-9,]+)\s+per season', page_source, re.IGNORECASE)
-            if match:
-                cap_hit_str = match.group(1).replace(',', '')
-                cap_hit = float(cap_hit_str) / 1_000_000
-                print(f"✓ {player_name} ({team_abbr}): ${cap_hit:.2f}M")
-                return cap_hit
-            
-            # MÉTHODE 2: Chercher dans le contrat actuel
-            # Format: "X year, $XX,XXX,XXX contract with a cap hit of $X,XXX,XXX"
-            match = re.search(r'contract with a cap hit of \$([0-9,]+)', page_source, re.IGNORECASE)
-            if match:
-                cap_hit_str = match.group(1).replace(',', '')
-                cap_hit = float(cap_hit_str) / 1_000_000
-                print(f"✓ {player_name} ({team_abbr}): ${cap_hit:.2f}M")
-                return cap_hit
-            
-            # MÉTHODE 3: Chercher spécifiquement pour la saison 2025-26
-            # Parfois les sites affichent année par année
-            season_pattern = season.replace('-', r'[-/]')  # 2025-26 ou 2025/26
-            match = re.search(rf'{season_pattern}.*?\$([0-9,]+)', page_source, re.IGNORECASE | re.DOTALL)
-            if match:
-                cap_hit_str = match.group(1).replace(',', '')
-                # Vérifier que c'est un montant raisonnable (pas un total de contrat)
-                if len(cap_hit_str) <= 9:  # Max ~100M
-                    cap_hit = float(cap_hit_str) / 1_000_000
-                    if cap_hit < 20:  # Cap hits sont généralement < 20M
-                        print(f"✓ {player_name} ({team_abbr}): ${cap_hit:.2f}M")
-                        return cap_hit
-            
-        except Exception as e:
-            continue
-    
-    return None
-
-def get_salary_capwages_selenium(player_name, team_abbr, driver):
-    """
-    Alternative: CapWages avec Selenium
-    """
-    clean_name = clean_player_name(player_name)
-    
-    urls_to_try = [
-        f"https://capwages.com/players/{clean_name}",
-        f"https://capwages.com/players/{clean_name}-1",
-        f"https://capwages.com/players/{clean_name}-2",
-    ]
+    found_salaries = []  # Pour stocker tous les salaires trouvés
     
     for url in urls_to_try:
         try:
             driver.get(url)
-            time.sleep(1.5)
+            time.sleep(3)  # Augmenté à 3 secondes pour meilleur chargement
             
             page_source = driver.page_source
             
-            # Vérifier l'équipe
-            if team_abbr and team_abbr.upper() not in page_source.upper():
-                continue
+            # Ne plus vérifier l'équipe - juste chercher le salaire
+            cap_hit = None
             
-            # Chercher le cap hit
-            match = re.search(r'cap hit of \$([0-9,]+)', page_source, re.IGNORECASE)
+            # STRATÉGIE 1: Extraire entre CURRENT CONTRACT et PROFILE
+            match = re.search(
+                r'CURRENT\s+CONTRACT(.*?)PROFILE',
+                page_source,
+                re.IGNORECASE | re.DOTALL
+            )
+            
             if match:
-                cap_hit_str = match.group(1).replace(',', '')
-                cap_hit = float(cap_hit_str) / 1_000_000
+                contract_section = match.group(1)
+                dollar_match = re.search(r'\$([0-9,]+)', contract_section)
                 
-                print(f"✓ {player_name} ({team_abbr}): ${cap_hit:.2f}M")
-                return cap_hit
+                if dollar_match:
+                    cap_hit_str = dollar_match.group(1).replace(',', '')
+                    cap_hit = float(cap_hit_str) / 1_000_000
+                    
+                    if 0.5 < cap_hit < 20:
+                        found_salaries.append(cap_hit)
+                        continue
+            
+            # STRATÉGIE 2: Chercher "Cap Hit" suivi du montant
+            if cap_hit is None:
+                cap_hit_match = re.search(
+                    r'Cap\s+Hit[^$]*\$([0-9,]+)',
+                    page_source,
+                    re.IGNORECASE | re.DOTALL
+                )
+                
+                if cap_hit_match:
+                    cap_hit_str = cap_hit_match.group(1).replace(',', '')
+                    cap_hit = float(cap_hit_str) / 1_000_000
+                    
+                    if 0.5 < cap_hit < 20:
+                        found_salaries.append(cap_hit)
+                        continue
+            
+            # STRATÉGIE 3: Chercher dans les balises span avec classe "val-lg"
+            if cap_hit is None:
+                span_match = re.search(
+                    r'<span class="val-lg">\$([0-9,]+)</span>',
+                    page_source
+                )
+                
+                if span_match:
+                    cap_hit_str = span_match.group(1).replace(',', '')
+                    cap_hit = float(cap_hit_str) / 1_000_000
+                    
+                    if 0.5 < cap_hit < 20:
+                        found_salaries.append(cap_hit)
             
         except Exception as e:
             continue
     
-    return None
-
-def parse_fantrax_csv(input_file):
-    """Parse le fichier CSV Fantrax"""
-    with open(input_file, 'r', encoding='utf-8') as f:
-        lines = f.readlines()
+    # Si on a trouvé des salaires, prendre le maximum (en cas d'homonymes)
+    if found_salaries:
+        max_salary = max(found_salaries)
+        print(f"✓ {player_name}: ${max_salary:.2f}M")
+        return max_salary
     
-    goalie_start = None
-    for i, line in enumerate(lines):
-        if '"","Goalies"' in line:
-            goalie_start = i
-            break
-    
-    if goalie_start is None:
-        return pd.read_csv(input_file)
-    
-    skaters_lines = lines[1:goalie_start]
-    goalies_lines = lines[goalie_start+1:]
-    
-    skaters_df = pd.read_csv(StringIO(''.join(skaters_lines)))
-    goalies_df = pd.read_csv(StringIO(''.join(goalies_lines)))
-    
-    common_cols = ['ID', 'Pos', 'Player', 'Team', 'Eligible', 'Status', 'Age', 
-                   'Opponent', 'Fantasy Points', 'Average Fantasy Points per Game',
-                   '% of leagues in which player was drafted', 
-                   'Average draft position among all leagues on Fantrax', 'GP']
-    
-    skaters_common = skaters_df[common_cols].copy()
-    goalies_common = goalies_df[common_cols].copy()
-    
-    df = pd.concat([skaters_common, goalies_common], ignore_index=True)
-    return df
+    return 0.78  # Valeur par défaut si non trouvé
 
 def enrich_fantrax_automatic(input_file, output_file):
     """
@@ -191,7 +145,7 @@ def enrich_fantrax_automatic(input_file, output_file):
     
     # Lire le fichier
     print(f"📂 Lecture: {input_file}")
-    df = parse_fantrax_csv(input_file)
+    df = pd.read_csv(input_file)
     print(f"✓ {len(df)} joueurs trouvés\n")
     
     # Ajouter la colonne
@@ -201,22 +155,16 @@ def enrich_fantrax_automatic(input_file, output_file):
     
     success_count = 0
     fail_count = 0
-    
     for idx, row in df.iterrows():
         player_name = row.get('Player', '')
         team = row.get('Team', '')
         
         if pd.isna(player_name) or player_name == '':
             continue
-        
         print(f"[{idx+1}/{len(df)}] Recherche: {player_name} ({team})...", end=' ')
         
         # Essayer PuckPedia
         cap_hit = get_salary_puckpedia_selenium(player_name, team, driver)
-        
-        # Si échec, essayer CapWages
-        if cap_hit is None:
-            cap_hit = get_salary_capwages_selenium(player_name, team, driver)
         
         if cap_hit:
             df.at[idx, 'Cap Hit (M$)'] = cap_hit
@@ -246,32 +194,17 @@ def enrich_fantrax_automatic(input_file, output_file):
     
     return df
 
-def batch_process_all_teams(team_files):
-    """
-    Traite plusieurs équipes en batch
-    Exemple: batch_process_all_teams(["equipe1.csv", "equipe2.csv", ...])
-    """
-    print("🔄 TRAITEMENT EN BATCH DE PLUSIEURS ÉQUIPES\n")
+def get_teams_total(df):
+    teams = df['Status'].unique()
+    teams_total = {}
     
-    for i, team_file in enumerate(team_files):
-        print(f"\n{'='*80}")
-        print(f"Équipe {i+1}/{len(team_files)}: {team_file}")
-        print('='*80)
-        
-        output_file = team_file.replace('.csv', '-Enrichi.csv')
-        
-        try:
-            enrich_fantrax_automatic(team_file, output_file)
-        except Exception as e:
-            print(f"❌ Erreur avec {team_file}: {e}")
-            continue
-        
-        print(f"\n✅ {team_file} terminé!")
-        time.sleep(5)  # Pause entre les équipes
-    
-    print(f"\n{'='*80}")
-    print(f"✅ TOUS LES FICHIERS TRAITÉS!")
-    print('='*80)
+    for team in teams:
+        team_df = df[df['Status'] == team]
+        total_salary = team_df['Cap Hit (M$)'].sum()
+        teams_total[team] = total_salary
+
+    teams_total = dict(sorted(teams_total.items(), key=lambda item: item[1], reverse=True))
+    return teams_total
 
 if __name__ == "__main__":
     # Installer les dépendances si nécessaire
@@ -288,26 +221,20 @@ if __name__ == "__main__":
     print("✓ Toutes les dépendances sont installées\n")
     
     # Fichiers
-    input_file = "Fantrax-Team-Roster-Pis Bowser 2025-2026.csv"
-    output_file = "Fantrax-Team-Roster-Enrichi.csv"
-    
-    print("\n🏒 OPTIONS")
+    input_file = "Datas/Test_all.csv"
+    output_file = input_file.replace('.csv', '-Enrichi.csv')
+    output_file = output_file.replace('Datas/', 'Output_Datas/')
+
     print("="*80)
-    print("1. Traiter un seul fichier")
-    print("2. Traiter toutes mes équipes (batch)")
-    print()
-    
-    choice = input("Votre choix (1 ou 2): ")
-    print()
-    
-    if choice == "1":
-        df = enrich_fantrax_automatic(input_file, output_file)
-    elif choice == "2":
-        # Listez tous vos fichiers d'équipes ici
-        team_files = [
-            "Fantrax-Team-Roster-Pis Bowser 2025-2026.csv",
-            # Ajoutez vos autres équipes ici
-        ]
-        batch_process_all_teams(team_files)
-    
+
+    start = time.time()
+    df = enrich_fantrax_automatic(input_file, output_file)
+    print(f"\n⏱️  Temps écoulé: {time.time() - start:.1f} secondes\n")
+    # Calculer les totaux par équipe
+    teams_total = get_teams_total(df)
+
+    # Afficher les résultats
+    for team, total in teams_total.items():
+        print(f"Total pour {team}: ${total:.2f}M")
+
     print("\n✅ TERMINÉ!")
