@@ -180,9 +180,6 @@ def enrich_fantrax_automatic(input_file, output_file):
     driver.quit()
     print("\n✓ Navigateur fermé")
     
-    # Sauvegarder
-    df.to_csv(output_file, index=False)
-    
     print(f"\n{'='*80}")
     print(f"📊 RÉSULTATS")
     print(f"{'='*80}")
@@ -233,8 +230,33 @@ if __name__ == "__main__":
     # Calculer les totaux par équipe
     teams_total = get_teams_total(df)
 
+    df = df.sort_values(by='Status', ascending=True)
+    df.reset_index(drop=True, inplace=True)
+    print(df.head())
     # Afficher les résultats
     for team, total in teams_total.items():
         print(f"Total pour {team}: ${total:.2f}M")
 
-    print("\n✅ TERMINÉ!")
+    # Construire un nouveau DataFrame en insérant une ligne total après chaque groupe Status
+    rows = []
+    for status, group in df.groupby('Status'):
+        # ajouter les lignes du groupe
+        for _, r in group.iterrows():
+            rows.append(r.to_dict())
+
+        # ajouter la ligne total pour ce status
+        total_value = teams_total.get(status, 0.0)
+        total_row = {
+            'Player': "",
+            'Team': "",
+            'Status': f"TOTAL POUR {status}",
+            'Cap Hit (M$)': f"{total_value:.2f}"
+        }
+        rows.append(total_row)
+
+    df_with_totals = pd.DataFrame(rows, columns=["Player", "Team", "Status", "Cap Hit (M$)"])
+
+    # Sauvegarder le résultat dans un nouveau fichier CSV
+    out_csv = "Output_Datas/Test_all-Enrichi-with_totals.csv"
+    df_with_totals.to_csv(out_csv, index=False)
+    print(f"Fichier avec totaux sauvegardé")
