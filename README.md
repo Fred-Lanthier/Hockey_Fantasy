@@ -1,9 +1,9 @@
-# Hockey Fantasy Salary Cap Tool 🏒
+# Hockey Fantasy Salary Cap Tool 
 Get NHL player salaries for your Fantrax fantasy league without paying for the premium salary cap feature!
 
-## 📋 Overview
+## Overview
 This tool scrapes NHL salary data from the web and calculates salary cap totals for your Fantrax fantasy hockey league. Instead of paying for Fantrax's premium features, use this free solution to track your league's salary cap.
-## 🚀 Setup
+## Setup
 ### 1. (Optional) Create a Conda Environment
 
 ```bash
@@ -18,7 +18,7 @@ cd Hockey_Fantasy
 pip3 install -r requirements.txt
 ```
 
-## 📖 How to Use
+## How to Use
 ### Step 1: Build Your Salary Database (One-Time Setup)
 This step scrapes the web for all NHL player salaries. Only do this once per season as it takes time.
 
@@ -59,13 +59,13 @@ Open `Output_Datas/<YOUR_FILE>-totals.csv`
 See each player, their owner (Status), and salary
 
 Team totals appear after each manager's roster
-💡 Quick Reference
+Quick Reference
 | Command | Purpose | When to Use |
 | :--- | :--- | :--- |
 | --action get | Scrape all NHL salaries | Once per season (slow) |
 | --action totals | Calculate team cap totals | Anytime (fast) |
 
-## 📁 File Structure
+## File Structure
 ```
 Hockey_Fantasy/
 ├── Datas/                          # Put your downloaded CSVs here
@@ -75,7 +75,7 @@ Hockey_Fantasy/
 ├── Salary_Scrap.py                # Main script
 └── requirements.txt
 ```
-## ✨ Example Workflow
+## Example Workflow
 ```bash
 # One-time setup (beginning of season)
 python3 Salary_Scrap.py --input Datas/All_Players_2025.csv --action get
@@ -86,7 +86,7 @@ python3 Salary_Scrap.py --input Datas/Week_2.csv --action totals
 python3 Salary_Scrap.py --input Datas/Week_3.csv --action totals
 ```
 
-Enjoy free salary cap tracking! 🎉
+Enjoy free salary cap tracking!
 
 
 
