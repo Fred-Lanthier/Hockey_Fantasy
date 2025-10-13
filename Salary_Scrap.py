@@ -8,6 +8,7 @@ import pandas as pd
 import time
 import re
 from io import StringIO
+import argparse
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -51,9 +52,7 @@ def get_salary_puckpedia_selenium(player_name, team_abbr, driver):
     clean_name = clean_player_name(player_name)
     
     urls_to_try = [
-        f"https://puckpedia.com/player/{clean_name}",
-        f"https://puckpedia.com/player/{clean_name}-1",
-        f"https://puckpedia.com/player/{clean_name}-2",
+        f"https://puckpedia.com/player/{clean_name}"
     ]
     
     found_salaries = []  # Pour stocker tous les salaires trouvés
@@ -114,7 +113,7 @@ def get_salary_puckpedia_selenium(player_name, team_abbr, driver):
                     cap_hit_str = span_match.group(1).replace(',', '')
                     cap_hit = float(cap_hit_str) / 1_000_000
                     
-                    if 0.5 < cap_hit < 20:
+                    if 0.775 < cap_hit < 50:
                         found_salaries.append(cap_hit)
             
         except Exception as e:
@@ -126,7 +125,7 @@ def get_salary_puckpedia_selenium(player_name, team_abbr, driver):
         print(f"✓ {player_name}: ${max_salary:.2f}M")
         return max_salary
     
-    return 0.78  # Valeur par défaut si non trouvé
+    return 0.775  # Valeur par défaut si non trouvé
 
 def enrich_fantrax_automatic(input_file, output_file):
     """
@@ -157,6 +156,8 @@ def enrich_fantrax_automatic(input_file, output_file):
     fail_count = 0
     for idx, row in df.iterrows():
         player_name = row.get('Player', '')
+        if player_name == "Mack Celebrini":
+            player_name = "Macklin Celebrini"
         team = row.get('Team', '')
         
         if pd.isna(player_name) or player_name == '':
@@ -191,6 +192,12 @@ def enrich_fantrax_automatic(input_file, output_file):
     
     return df
 
+def create_csv_player_salary(df):
+    """Créer un CSV en mémoire avec les joueurs et leurs salaires"""
+    df = df[['Player', 'Cap Hit (M$)']].copy()
+    output_file = "Output_Datas/Player_Salaries.csv"
+    df.to_csv(output_file, index=False)
+
 def get_teams_total(df):
     teams = df['Status'].unique()
     teams_total = {}
@@ -217,46 +224,67 @@ if __name__ == "__main__":
     
     print("✓ Toutes les dépendances sont installées\n")
     
+    # Utiliser argparse pour gérer les arguments de ligne de commande
+    parser = argparse.ArgumentParser(description="Enrichir un fichier Fantrax avec les salaires NHL.")
+    parser.add_argument('--input', type=str, default="Datas/Test_all.csv", help="Chemin du fichier CSV d'entrée Fantrax")
+    parser.add_argument('--action', type=str, choices=['get', 'totals'], default='totals', help="Action à effectuer: 'get' pour obtenir les salaires, 'totals' pour calculer les totaux par équipe")
+    args = parser.parse_args()
+
     # Fichiers
-    input_file = "Datas/Test_all.csv"
+    input_file = args.input
     output_file = input_file.replace('.csv', '-Enrichi.csv')
     output_file = output_file.replace('Datas/', 'Output_Datas/')
 
-    print("="*80)
+    # Action selon l'argument
+    if args.action == 'get':
+        start = time.time()
+        df = enrich_fantrax_automatic(input_file, output_file)
+        create_csv_player_salary(df)
+        print(f"\n⏱️  Temps écoulé: {time.time() - start:.1f} secondes\n")
+    
+    elif args.action == 'totals':
+        print("📊 Calcul des totaux par équipe...\n")
+        salary_file = "Output_Datas/Player_Salaries.csv"
+        df_salary = pd.read_csv(salary_file)
+        df_fantrax = pd.read_csv(input_file)
 
-    start = time.time()
-    df = enrich_fantrax_automatic(input_file, output_file)
-    print(f"\n⏱️  Temps écoulé: {time.time() - start:.1f} secondes\n")
-    # Calculer les totaux par équipe
-    teams_total = get_teams_total(df)
+        df = pd.merge(df_fantrax, df_salary, on='Player', how='left')
+        df = df[df["Status"] != "FA"]
+        df['Cap Hit (M$)'] = df['Cap Hit (M$)'].fillna(0.775)
+        teams_total = get_teams_total(df)
 
-    df = df.sort_values(by='Status', ascending=True)
-    df.reset_index(drop=True, inplace=True)
-    print(df.head())
-    # Afficher les résultats
-    for team, total in teams_total.items():
-        print(f"Total pour {team}: ${total:.2f}M")
+        # Classer par Status (dirigeant de l'équipe)
+        df = df.sort_values(by='Status', ascending=True)
+        df.reset_index(drop=True, inplace=True)
+        print(df.head())
+        # Afficher les résultats
+        for team, total in teams_total.items():
+            print(f"Total pour {team}: ${total:.2f}M")
 
-    # Construire un nouveau DataFrame en insérant une ligne total après chaque groupe Status
-    rows = []
-    for status, group in df.groupby('Status'):
-        # ajouter les lignes du groupe
-        for _, r in group.iterrows():
-            rows.append(r.to_dict())
+        # Construire un nouveau DataFrame en insérant une ligne total après chaque groupe Status
+        rows = []
+        for status, group in df.groupby('Status'):
+            # ajouter les lignes du groupe
+            for _, r in group.iterrows():
+                rows.append(r.to_dict())
 
-        # ajouter la ligne total pour ce status
-        total_value = teams_total.get(status, 0.0)
-        total_row = {
-            'Player': "",
-            'Team': "",
-            'Status': f"TOTAL POUR {status}",
-            'Cap Hit (M$)': f"{total_value:.2f}"
-        }
-        rows.append(total_row)
+            # ajouter la ligne total pour ce status
+            total_value = teams_total.get(status, 0.0)
+            total_row = {
+                'Player': "",
+                'Team': "",
+                'Status': f"TOTAL POUR {status}",
+                'Cap Hit (M$)': f"{total_value:.2f}"
+            }
+            rows.append(total_row)
 
-    df_with_totals = pd.DataFrame(rows, columns=["Player", "Team", "Status", "Cap Hit (M$)"])
+        df_with_totals = pd.DataFrame(rows, columns=["Player", "Team", "Status", "Cap Hit (M$)"])
 
-    # Sauvegarder le résultat dans un nouveau fichier CSV
-    out_csv = "Output_Datas/Test_all-Enrichi-with_totals.csv"
-    df_with_totals.to_csv(out_csv, index=False)
-    print(f"Fichier avec totaux sauvegardé")
+        # Sauvegarder le résultat dans un nouveau fichier CSV
+        print(f"\n📂 Lecture: {input_file}")
+        out_csv = input_file.replace('.csv', '-totals.csv')
+        print(f"📂 Sauvegarde: {out_csv}")
+        out_csv = out_csv.replace('Datas', 'Output_Datas')
+        print(f"\n✓ Sauvegarde du fichier avec totaux: {out_csv}")
+        df_with_totals.to_csv(out_csv, index=False)
+        print(f"Fichier avec totaux sauvegardé")
