@@ -27,14 +27,14 @@ Download all players from Fantrax:
 - Go to your league → Players tab
 - In Status/Team dropdown, select "All"
 - Click the download CSV button: <img width="64" height="62" alt="image" src="https://github.com/user-attachments/assets/0cc2c74d-e415-4982-af51-56ff5343fb55" />
-- Place the file in Datas/ folder
+- Place the file in `Datas/` folder
 
 Run the scraper:
 ```bash
  python3 Salary_Scrap.py --input Datas/<YOUR_FILE>.csv --action get
 ```
 
-This creates Output_Datas/Player_Salaries.csv - your salary database for the season.
+This creates `Output_Datas/Player_Salaries.csv` - your salary database for the season.
 
 ### Step 2: Calculate Team Salary Totals (Use Anytime)
 This step is fast and can be run as often as you want.
@@ -44,8 +44,8 @@ Download your league's current rosters:
 - Go to your league → Players tab
 - In Status/Team dropdown, select "All taken players"
 - Click the download CSV button
-- Place the file in Datas/ folder
-- Optional: Rename it with the date or week number (e.g., Week_10.csv) to track changes over time
+- Place the file in `Datas/` folder
+- Optional: Rename it with the date or week number (e.g., `Week_10.csv`) to track changes over time
 
 Calculate totals:
 ```bash
@@ -54,7 +54,7 @@ Calculate totals:
 
 ## View results:
 
-Open Output_Datas/<YOUR_FILE>-totals.csv
+Open `Output_Datas/<YOUR_FILE>-totals.csv`
 
 See each player, their owner (Status), and salary
 
@@ -66,6 +66,7 @@ Team totals appear after each manager's roster
 | --action totals | Calculate team cap totals | Anytime (fast) |
 
 ## 📁 File Structure
+```
 Hockey_Fantasy/
 ├── Datas/                          # Put your downloaded CSVs here
 ├── Output_Datas/
@@ -73,7 +74,7 @@ Hockey_Fantasy/
 │   └── *-totals.csv               # Team totals (created by --action totals)
 ├── Salary_Scrap.py                # Main script
 └── requirements.txt
-
+```
 ## ✨ Example Workflow
 ```bash
 # One-time setup (beginning of season)
