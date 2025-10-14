@@ -281,10 +281,7 @@ if __name__ == "__main__":
         df_with_totals = pd.DataFrame(rows, columns=["Player", "Team", "Status", "Cap Hit (M$)"])
 
         # Sauvegarder le résultat dans un nouveau fichier CSV
-        print(f"\n📂 Lecture: {input_file}")
         out_csv = input_file.replace('.csv', '-totals.csv')
-        print(f"📂 Sauvegarde: {out_csv}")
         out_csv = out_csv.replace('Datas', 'Output_Datas')
-        print(f"\n✓ Sauvegarde du fichier avec totaux: {out_csv}")
         df_with_totals.to_csv(out_csv, index=False)
         print(f"Fichier avec totaux sauvegardé")
