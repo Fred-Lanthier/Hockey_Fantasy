@@ -149,9 +149,9 @@ def enrich_fantrax_automatic(input_file, output_file):
     
     # Ajouter la colonne
     df['Cap Hit (M$)'] = None
-    
-    print("💰 Récupération des salaires (peut prendre quelques minutes)...\n")
-    
+
+    print("💰 Récupération des salaires (peut prendre des heures)...\n")
+
     success_count = 0
     fail_count = 0
     for idx, row in df.iterrows():
@@ -194,7 +194,7 @@ def enrich_fantrax_automatic(input_file, output_file):
 
 def create_csv_player_salary(df):
     """Créer un CSV en mémoire avec les joueurs et leurs salaires"""
-    df = df[['Player', 'Cap Hit (M$)']].copy()
+    df = df[['Player', 'Teams', 'Cap Hit (M$)']].copy()
     output_file = "Output_Datas/Player_Salaries.csv"
     df.to_csv(output_file, index=False)
 
@@ -239,6 +239,7 @@ if __name__ == "__main__":
     if args.action == 'get':
         start = time.time()
         df = enrich_fantrax_automatic(input_file, output_file)
+        df = df.drop_duplicates(subset='Player', keep='first')
         create_csv_player_salary(df)
         print(f"\n⏱️  Temps écoulé: {time.time() - start:.1f} secondes\n")
     
