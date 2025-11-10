@@ -252,7 +252,10 @@ if __name__ == "__main__":
         df = pd.merge(df_fantrax, df_salary, on='Player', how='left')
         df = df[df["Status"] != "FA"]
         df['Cap Hit (M$)'] = df['Cap Hit (M$)'].fillna(0.775)
-        teams_total = get_teams_total(df)
+        
+        # Calculer les totaux en excluant les joueurs avec Roster Status "Inj Res"
+        df_for_totals = df[df['Roster Status'] != 'Inj Res'].copy()
+        teams_total = get_teams_total(df_for_totals)
 
         # Classer par Status (dirigeant de l'équipe)
         df = df.sort_values(by='Status', ascending=True)
@@ -263,6 +266,7 @@ if __name__ == "__main__":
             print(f"Total pour {team}: ${total:.2f}M")
 
         # Construire un nouveau DataFrame en insérant une ligne total après chaque groupe Status
+        # Inclure la colonne 'Roster Status' depuis df_fantrax pour visibilité
         rows = []
         for status, group in df.groupby('Status'):
             # ajouter les lignes du groupe
@@ -274,15 +278,18 @@ if __name__ == "__main__":
             total_row = {
                 'Player': "",
                 'Team': "",
+                'Roster Status': "",
                 'Status': f"TOTAL POUR {status}",
-                'Cap Hit (M$)': f"{total_value:.2f}"
+                # garder une représentation numérique avec 2 décimales
+                'Cap Hit (M$)': round(total_value, 2)
             }
             rows.append(total_row)
 
-        df_with_totals = pd.DataFrame(rows, columns=["Player", "Team", "Status", "Cap Hit (M$)"])
+        # S'assurer que la colonne 'Roster Status' est présente dans l'ordre souhaité
+        df_with_totals = pd.DataFrame(rows, columns=["Player", "Team", "Roster Status", "Status", "Cap Hit (M$)"])
 
         # Sauvegarder le résultat dans un nouveau fichier CSV
         out_csv = input_file.replace('.csv', '-totals.csv')
         out_csv = out_csv.replace('Datas', 'Output_Datas')
         df_with_totals.to_csv(out_csv, index=False)
-        print(f"Fichier avec totaux sauvegardé")
+        print(f"Fichier avec totaux sauvegardé: {out_csv}")
